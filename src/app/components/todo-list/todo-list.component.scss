@@ -1,0 +1,48 @@
+.container {
+  border: 1px solid #b5b2b2;
+  width: 570px;
+}
+
+.title p {
+  color: #ffc7d1;
+  font-family: cursive;
+  font-size: 100px;
+  text-align: center;
+}
+
+.todo {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.remove:hover {
+  color: red;
+}
+
+div .buttons {
+  min-width: 100px;
+  margin-left: auto;
+}
+
+input[type="text"] {
+  border: none;
+  font-size: 19px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-left: 10px;
+  margin-top: 20px;
+}

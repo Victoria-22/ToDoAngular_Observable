@@ -1,0 +1,33 @@
+<div class="title">
+  <p>Todos</p>
+</div>
+<div class="container">
+  <form [formGroup]="todoForm">
+    <input
+      type="text"
+      id="task"
+      formControlName="task"
+      placeholder="What needs to be done?"
+      (keyup.enter)="addTodo()">
+  </form>
+</div>
+<div class="container">
+  <div *ngFor="let todo of todos | async; let i = index">
+    <div class="row">
+      <div class="col-md-1">
+        <input type="checkbox" [(ngModel)]="todo.completed">
+      </div>
+      <div class="col-md-11">
+        <div class="todo">
+          <span [ngClass]="{'completed' : todo.completed }">{{todo.description}}</span>
+          <div class="buttons">
+            <span class="remove" (click)="deleteTodo(todo.id)">X</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p class="text-muted">{{(todos | async)?.length}} items left</p>
+  </div>
+</div>
