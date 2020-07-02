@@ -15,9 +15,10 @@ export class TodoListComponent implements OnInit {
   todoDescription: string;
   idForTodo: number;
   todoForm: FormGroup;
+
   constructor(
-      private formBuilder: FormBuilder,
-      private todoService: TodoService) {
+    private formBuilder: FormBuilder,
+    private todoService: TodoService) {
     this.newTodosList = this.todoService.todos;
   }
 

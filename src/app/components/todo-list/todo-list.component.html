@@ -19,7 +19,9 @@
       </div>
       <div class="col-md-11">
         <div class="todo">
-          <span [ngClass]="{'completed' : todo.completed }">{{todo.description}}</span>
+          <span [ngClass]="{'completed' : todo.completed }">
+            {{todo.description}}
+          </span>
           <div class="buttons">
             <span class="remove" (click)="deleteTodo(todo.id)">X</span>
           </div>
